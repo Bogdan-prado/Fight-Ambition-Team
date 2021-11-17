@@ -8,7 +8,7 @@ function MenuItems(){
     );
     function ButtonTitle(props){
         return <button type="button">{props.title}</button>;
-        }
+    }
     return(
     <header>
         <div className="logo">
