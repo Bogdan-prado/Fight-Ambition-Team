@@ -1,0 +1,16 @@
+/*Font Variable*/
+
+@mixin FontFamily($fontFamily,$fontStyle,$fontWeight,$fontSize,$lineHeight,$fontColor){
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color:$fontColor;
+}
+
+
+
+@mixin bordered($color, $width) {
+    border: $width solid $color;
+  }
