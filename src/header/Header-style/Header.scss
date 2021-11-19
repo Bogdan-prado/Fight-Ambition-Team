@@ -4,24 +4,36 @@ body{
     background-color: black;
     max-width: 1366px;
     margin: auto;
+    color:red;
     header{
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
+        max-width: 1186px;
+        margin: calc(0px + (32 - 0) * ((100vw - 320px) / (1366 - 320))) auto auto auto;
         border: 2px solid red;
-        > div{
-            border: 2px solid blue;
+        >div{
+            border: 3px solid blue;
+        }
+        .MobMenuOpener{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 10px;
+            span{
+                font-size: 25px;
+            }
         }
         .logo{
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
             img{
                 width: 75px;
                 height: 76px;
             }
         }
         .PCMenu{
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
         ul{
@@ -29,22 +41,51 @@ body{
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #333;
             li{
                 float: left;
                 margin: 8px 16px;
+                text-transform: uppercase;
                 @include FontFamily('Montserrat', normal,500,12px,15px,#FFFFFF);
             }
         }
         }
         .headerRegister{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: none;
         }
     }
 }
 
-ul{
-    color:red;
+@media all and(min-width:768px) {
+    body{
+        header{
+            grid-template-columns: auto auto auto;
+            > div{
+                border: 3px solid blue;
+            }
+            .MobMenuOpener{
+                display: none;
+            }
+            .logo{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .PCMenu{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .headerRegister{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button{
+                    @include registerButton(187px,56px,50px,#FFD540,2px,#FFD540,transparent);
+                    @include FontFamily('Montserrat', normal,600,14px,17.07px,#FFD540);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    
 }

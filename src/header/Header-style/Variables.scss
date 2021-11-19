@@ -11,6 +11,11 @@
 
 
 
-@mixin bordered($color, $width) {
-    border: $width solid $color;
+@mixin registerButton($width, $height,$borderRadius,$color,$borderWidth,$borderColor,$backgroundColor) {
+    width: $width;
+    height:$height;
+    border-radius: $borderRadius;
+    color:$color;
+    border:$borderWidth solid $borderColor;
+    background-color: $backgroundColor;
   }
