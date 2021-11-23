@@ -60,6 +60,7 @@ function MenuItems(){
                 <div className="headerRegister">
                     <ButtonTitle title="записаться" />
                     </div>
+                    
         </header>
     )};
 
